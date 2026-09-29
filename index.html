@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Yasmani & Yissela — 5° Aniversario de Bodas</title>
+  <meta name="description" content="Te invitamos a celebrar nuestro 5° Aniversario de Bodas — 18 de Octubre de 2026">
+
+  <!-- Open Graph para vista previa en WhatsApp y redes -->
+  <meta property="og:title" content="Yasmani & Yissela — 5° Aniversario de Bodas">
+  <meta property="og:description" content="Cinco años celebrando el amor y la complicidad. ¡Acompáñanos!">
+  <meta property="og:image" content="assets/images/principal.png">
+  <meta name="theme-color" content="#C59B3F">
+
+  <!-- Google Fonts: Cormorant Garamond, Great Vibes, Lato, Montserrat, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Material Icons Outlined -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================
+       ESQUINAS DE LIMÓN (Generadas por utils/generate_lemons.py)
+       Ramas decorativas con tallo marrón y frutos dorados
+       ============================================ -->
+  <img src="assets/images/lemon_branch_tl.png" alt="" class="lemon-corner lemon-tl" aria-hidden="true">
+  <img src="assets/images/lemon_branch_tr.png" alt="" class="lemon-corner lemon-tr" aria-hidden="true">
+  <img src="assets/images/lemon_branch_bl.png" alt="" class="lemon-corner lemon-bl" aria-hidden="true">
+  <img src="assets/images/lemon_branch_br.png" alt="" class="lemon-corner lemon-br" aria-hidden="true">
+
+  <!-- Audio de Fondo (musica.mp3) -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="assets/audio/musica.mp3" type="audio/mpeg">
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ============================================
+       REPRODUCTOR FLOTANTE FAB (Idéntico a /example)
+       ============================================ -->
+  <button id="audio-fab" class="audio-fab" title="Reproducir canción" type="button" aria-label="Música">
+    <span class="material-icons-outlined audio-icon" id="audio-fab-icon">play_arrow</span>
+  </button>
+
+  <!-- ============================================
+       1. HERO SECTION (PORTADA)
+       ============================================ -->
+  <header id="hero" class="hero-section">
+    <!-- Marco Botánico Superior -->
+    <img src="assets/images/botanical_arch.svg" alt="" class="botanical-header-arch" aria-hidden="true">
+
+    <div class="container fade-in">
+      <p class="hero-pretitle" id="hero-pretitle">Celebrando nuestro amor</p>
+      <p class="hero-title-script" id="hero-title-script">Feliz Aniversario</p>
+      <h1 class="hero-couple-names" id="hero-couple-names">Yasmani <span class="amp">&amp;</span> Yissela</h1>
+      
+      <div class="date-badge">
+        <span class="day" id="badge-day">18</span>
+        <span class="month" id="badge-month">Octubre</span>
+        <span class="year" id="badge-year">2026</span>
+      </div>
+
+      <!-- Reproductor de audio integrado en Hero (Idéntico a /example) -->
+      <div class="hero-audio-player fade-in" id="hero-audio-player">
+        <button id="hero-play-btn" class="hero-play-btn" title="Reproducir canción" type="button">
+          <span class="material-icons-outlined" id="hero-play-icon">play_arrow</span>
+        </button>
+        <div class="hero-audio-info">
+          <p class="hero-audio-title" id="hero-audio-title">Nuestra Canción</p>
+          <p class="hero-audio-sub" id="hero-audio-sub">Celebrando 5 Años de Amor</p>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span class="material-icons-outlined">expand_more</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================
+       2. COUNTDOWN (CUENTA REGRESIVA)
+       ============================================ -->
+  <section id="timer" class="timer-section">
+    <div class="container fade-in">
+      <p class="section-subtitle">Cuenta regresiva</p>
+      <div class="countdown-container" id="countdown-wrap">
+        <div class="countdown-item">
+          <span id="days" class="time-value">00</span>
+          <span class="time-label">Días</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span id="hours" class="time-value">00</span>
+          <span class="time-label">Horas</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span id="minutes" class="time-value">00</span>
+          <span class="time-label">Min</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-item">
+          <span id="seconds" class="time-value">00</span>
+          <span class="time-label">Seg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       3. FOTO PRINCIPAL PROTAGONISTA (#couple)
+       ============================================ -->
+  <section id="couple" class="couple-section">
+    <div class="container fade-in">
+      <div class="couple-photo-wrapper">
+        <img src="assets/images/principal.png" alt="Yasmani y Yissela - 5° Aniversario" class="principal-hero-img" id="img-principal" onerror="this.src='principal.png'">
+      </div>
+
+      <!-- Texto Bíblico Destacado (Formato /example) -->
+      <div id="biblical-wrap" class="biblical-quote-box">
+        <p class="couple-quote" id="couple-biblical">
+          "Y una cuerda triple no se rompe fácilmente"
+          <small id="couple-biblical-ref">— Eclesiastés 4:12</small>
+        </p>
+      </div>
+
+      <!-- Separador Botánico -->
+      <div class="botanical-divider-wrap">
+        <img src="assets/images/botanical_divider.svg" alt="" class="botanical-divider-img" aria-hidden="true">
+      </div>
+
+      <p class="couple-quote" id="couple-quote" style="font-size: 1.1rem; color: var(--color-text-mid); max-width: 500px; margin: 0 auto;">
+        "Gracias por caminar juntos, por elegirnos cada día y por hacer de nuestro amor la mejor historia. ¡Que vengan muchos años más juntos!"
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. BENDICIÓN & MENSAJE (#blessing)
+       ============================================ -->
+  <section id="blessing" class="blessing-section">
+    <img src="assets/images/botanical_corner.svg" alt="" class="botanical-corner botanical-corner-tr" aria-hidden="true">
+
+    <div class="container fade-in">
+      <h2 class="section-title script-font" id="blessing-title">Cinco Años Caminando Juntos</h2>
+      <div class="blessing-text" id="blessing-text">
+        <p>Cinco años celebrando el amor, la complicidad y cada paso que hemos dado como familia.</p>
+        <p>Nos llena de inmensa alegría compartir este día tan especial contigo, porque tu presencia le dará un significado aún más hermoso a nuestra celebración.</p>
+        <p class="signature" id="blessing-signature">— Yasmani &amp; Yissela</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separador Botánico -->
+  <div class="botanical-divider-wrap">
+    <img src="assets/images/botanical_divider.svg" alt="" class="botanical-divider-img" aria-hidden="true">
+  </div>
+
+  <!-- ============================================
+       5. RECEPCIÓN & CELEBRACIÓN (#reception)
+       ============================================ -->
+  <section id="reception" class="event-section">
+    <div class="container fade-in">
+      <span class="material-icons-outlined event-icon">celebration</span>
+      <h2 class="section-title script-font">Recepción &amp; Celebración</h2>
+      <p class="section-subtitle">Lugar de la reunión</p>
+
+      <div class="event-details-card">
+        <div class="event-detail-row">
+          <span class="material-icons-outlined">calendar_today</span>
+          <div>
+            <p class="detail-main" id="event-date-text">Domingo, 18 de Octubre de 2026</p>
+            <p class="detail-sub">Acompáñanos puntualmente</p>
+          </div>
+        </div>
+
+        <div class="event-detail-row">
+          <span class="material-icons-outlined">schedule</span>
+          <div>
+            <p class="detail-main" id="event-time-text">1:00 PM</p>
+            <p class="detail-sub">Hasta las 8:00 PM</p>
+          </div>
+        </div>
+
+        <div class="event-detail-row">
+          <span class="material-icons-outlined">place</span>
+          <div>
+            <p class="detail-main" id="event-place-name">Condominio Lomas de Carabayllo, Club House</p>
+            <p class="detail-sub" id="event-place-address">Av Universitaria, costado Mercado Tambo<br>Carabayllo, Lima</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-group">
+        <a id="btn-open-maps" href="https://maps.app.goo.gl/apAizz32TW2wtM229" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <span class="material-icons-outlined">map</span> Ver Ubicación
+        </a>
+        <button id="btn-add-calendar" class="btn btn-secondary" type="button">
+          <span class="material-icons-outlined">event</span> Agendar en Calendar
+        </button>
+        <button id="btn-copy-address" class="btn btn-outline" type="button">
+          <span class="material-icons-outlined">content_copy</span> Copiar Dirección
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. ITINERARIO (#itinerary)
+       ============================================ -->
+  <section id="itinerary" class="itinerary-section">
+    <div class="container fade-in">
+      <span class="material-icons-outlined event-icon">timeline</span>
+      <h2 class="section-title script-font">Itinerario</h2>
+      <p class="section-subtitle">Cronograma de la celebración</p>
+
+      <div class="timeline" id="timeline-list">
+        <!-- Renderizado dinámicamente -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. CÓDIGO DE VESTIMENTA (#dresscode)
+       ============================================ -->
+  <section id="dresscode" class="dresscode-section">
+    <div class="container fade-in">
+      <span class="material-icons-outlined event-icon">checkroom</span>
+      <h2 class="section-title script-font">Código de Vestimenta</h2>
+      <span class="dresscode-badge" id="dresscode-badge">Sport Elegante</span>
+
+      <div class="dresscode-gallery">
+        <div class="dresscode-card">
+          <h4>Caballeros</h4>
+          <p id="dresscode-caballeros">Sport elegante.</p>
+        </div>
+        <div class="dresscode-card">
+          <h4>Damas</h4>
+          <p id="dresscode-damas">Casual elegante.</p>
+        </div>
+      </div>
+
+      <div class="dresscode-rules">
+        <h4>Por favor, considerar:</h4>
+        <ul id="dresscode-rules-list">
+          <li><span class="rule-no">✕</span> Evitar prendas excesivamente informales.</li>
+          <li><span class="rule-yes">✓</span> Traje sport y vestido casual elegante.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. REGALOS & ENCARGADOS (#gifts)
+       ============================================ -->
+  <section id="gifts" class="gifts-section">
+    <div class="container fade-in">
+      <span class="material-icons-outlined gift-icon">redeem</span>
+      <h2 class="section-title script-font">Detalles &amp; Obsequios</h2>
+      <p class="section-text" id="gift-message" style="max-width: 540px; margin: 0 auto 1.5rem; font-size: 1.05rem;">
+        El mayor obsequio es contar con tu presencia en esta fecha tan significativa. Si deseas tener un detalle adicional con nosotros, dispondremos de un cofre para lluvia de sobres en la entrada o puedes coordinar con nuestros encargados.
+      </p>
+
+      <!-- Cuenta Bancaria (opcional) -->
+      <div class="bank-card" id="bank-card" style="display: none;">
+        <div class="bank-row">
+          <span class="bank-label">Banco:</span>
+          <span class="bank-val" id="bank-name">BCP / Interbank / Plin</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Cuenta:</span>
+          <span class="bank-val" id="bank-account">194-98765432-0-88</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">CCI:</span>
+          <span class="bank-val" id="bank-cci">002-194-009876543208-88</span>
+        </div>
+        <div class="bank-row">
+          <span class="bank-label">Titular:</span>
+          <span class="bank-val" id="bank-titular">Yasmani Castro</span>
+        </div>
+      </div>
+
+      <button id="btn-copy-bank" class="btn btn-outline" type="button" style="display: none; max-width: 340px; margin: 0 auto 1.5rem;">
+        <span class="material-icons-outlined">content_copy</span> Copiar Número de Cuenta
+      </button>
+
+      <!-- Sección de Encargados de Regalos -->
+      <div id="gift-coordinators-wrap" class="gift-coordinators">
+        <h4 class="coordinator-title">Encargados para Coordinar Regalos</h4>
+        <div id="coordinator-list">
+          <!-- Renderizado dinámico desde datos.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       9. RSVP (CONFIRMAR ASISTENCIA)
+       ============================================ -->
+  <section id="rsvp" class="rsvp-section">
+    <div class="container fade-in">
+      <h2 class="section-title script-font" style="font-size: 3.5rem;">Confirmar Asistencia</h2>
+      <p class="section-text" style="font-size: 1.15rem; max-width: 520px; margin: 0 auto 1.5rem;">
+        Nos encantaría contar contigo en este día tan especial. Por favor confirma tu asistencia para recibirte con mucho cariño.
+      </p>
+
+      <div style="max-width: 440px; margin: 0 auto;">
+        <button id="btn-rsvp-whatsapp" class="btn btn-whatsapp" type="button">
+          <span class="material-icons-outlined">chat</span> Confirmar por WhatsApp
+        </button>
+      </div>
+
+      <p class="rsvp-deadline-text" id="rsvp-deadline">Favor confirmar antes del 10 de Octubre</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. SITE FOOTER
+       ============================================ -->
+  <footer class="site-footer">
+    <img src="assets/images/botanical_corner.svg" alt="" class="botanical-corner botanical-corner-br" aria-hidden="true">
+
+    <div class="container fade-in">
+      <h2 class="footer-names" id="footer-names">Y <span class="amp">&amp;</span> Y</h2>
+      <p class="footer-date" id="footer-date">18 · 10 · 2026</p>
+      <p class="footer-thankyou">¡Gracias por acompañarnos!</p>
+      <p class="footer-esperamos">¡Los esperamos con los brazos abiertos!</p>
+    </div>
+  </footer>
+
+  <!-- Toast de Notificaciones -->
+  <div id="toast-notice" class="toast-notice">
+    <span class="material-icons-outlined" style="font-size: 1.2rem; color: var(--color-accent);">check_circle</span>
+    <span id="toast-text">¡Acción completada!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="datos.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

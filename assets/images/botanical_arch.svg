@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 240" fill="none" class="botanical-arch-svg">
+  <defs>
+    <!-- Gradiente Dorado -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C59B3F" />
+      <stop offset="50%" stop-color="#E2BF65" />
+      <stop offset="100%" stop-color="#9E7828" />
+    </linearGradient>
+    <!-- Gradiente Verde Oliva / Salvia -->
+    <linearGradient id="oliveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E8F72" />
+      <stop offset="100%" stop-color="#4A5B40" />
+    </linearGradient>
+    <!-- Sombra suave -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#C59B3F" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Arco central sutil -->
+  <path d="M 80,180 Q 400,20 720,180" stroke="url(#goldGrad)" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6" />
+
+  <!-- Corona Botánica Central -->
+  <g transform="translate(400, 75)" filter="url(#softGlow)">
+    <!-- Rama Izquierda -->
+    <path d="M 0,0 C -50,-10 -110,-5 -160,15 C -200,30 -240,60 -270,95" stroke="#5A6B4F" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Hojas Izquierda -->
+    <path d="M -30,-4 C -45,-18 -35,-32 -20,-20 C -10,-10 -15,0 -30,-4 Z" fill="url(#oliveGrad)" />
+    <path d="M -65,-7 C -85,-18 -75,-35 -55,-24 C -45,-15 -52,-2 -65,-7 Z" fill="url(#oliveGrad)" />
+    <path d="M -105,2 C -128,-6 -122,-25 -100,-16 C -90,-9 -95,5 -105,2 Z" fill="#6B7D5F" />
+    <path d="M -145,15 C -168,10 -162,-8 -142,-2 C -132,4 -135,18 -145,15 Z" fill="url(#oliveGrad)" />
+    <path d="M -185,32 C -208,30 -202,12 -182,16 C -172,22 -175,34 -185,32 Z" fill="#7E8F72" />
+    <path d="M -225,55 C -246,55 -240,38 -222,40 C -212,45 -215,57 -225,55 Z" fill="url(#oliveGrad)" />
+    <path d="M -255,80 C -272,82 -268,68 -252,68 C -244,72 -247,81 -255,80 Z" fill="#5A6B4F" />
+
+    <!-- Acentos dorados izquierda -->
+    <circle cx="-50" cy="-22" r="3.5" fill="url(#goldGrad)"/>
+    <circle cx="-120" cy="-12" r="3" fill="url(#goldGrad)"/>
+    <circle cx="-190" cy="18" r="3.5" fill="url(#goldGrad)"/>
+    <circle cx="-250" cy="62" r="2.5" fill="url(#goldGrad)"/>
+
+    <!-- Rama Derecha (Espejo) -->
+    <path d="M 0,0 C 50,-10 110,-5 160,15 C 200,30 240,60 270,95" stroke="#5A6B4F" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Hojas Derecha -->
+    <path d="M 30,-4 C 45,-18 35,-32 20,-20 C 10,-10 15,0 30,-4 Z" fill="url(#oliveGrad)" />
+    <path d="M 65,-7 C 85,-18 75,-35 55,-24 C 45,-15 52,-2 65,-7 Z" fill="url(#oliveGrad)" />
+    <path d="M 105,2 C 128,-6 122,-25 100,-16 C 90,-9 95,5 105,2 Z" fill="#6B7D5F" />
+    <path d="M 145,15 C 168,10 162,-8 142,-2 C 132,4 135,18 145,15 Z" fill="url(#oliveGrad)" />
+    <path d="M 185,32 C 208,30 202,12 182,16 C 172,22 175,34 185,32 Z" fill="#7E8F72" />
+    <path d="M 225,55 C 246,55 240,38 222,40 C 212,45 215,57 225,55 Z" fill="url(#oliveGrad)" />
+    <path d="M 255,80 C 272,82 268,68 252,68 C 244,72 247,81 255,80 Z" fill="#5A6B4F" />
+
+    <!-- Acentos dorados derecha -->
+    <circle cx="50" cy="-22" r="3.5" fill="url(#goldGrad)"/>
+    <circle cx="120" cy="-12" r="3" fill="url(#goldGrad)"/>
+    <circle cx="190" cy="18" r="3.5" fill="url(#goldGrad)"/>
+    <circle cx="250" cy="62" r="2.5" fill="url(#goldGrad)"/>
+
+    <!-- Flor / Rosa Central en Acuarela Marfil y Oro -->
+    <circle cx="0" cy="-4" r="14" fill="#FAF6EE" stroke="url(#goldGrad)" stroke-width="1.5" />
+    <circle cx="0" cy="-4" r="9" fill="#F4ECE0" stroke="#C59B3F" stroke-width="1" />
+    <circle cx="0" cy="-4" r="4.5" fill="url(#goldGrad)" />
+    <path d="M -8,-10 C -4,-16 4,-16 8,-10" stroke="#C59B3F" stroke-width="1" fill="none" />
+    <path d="M -8,2 C -4,8 4,8 8,2" stroke="#C59B3F" stroke-width="1" fill="none" />
+  </g>
+</svg>

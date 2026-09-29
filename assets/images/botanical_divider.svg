@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" fill="none" class="botanical-divider-svg">
+  <defs>
+    <linearGradient id="divGold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C59B3F" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#E2BF65"/>
+      <stop offset="100%" stop-color="#C59B3F" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="divOlive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7E8F72" />
+      <stop offset="100%" stop-color="#4A5B40" />
+    </linearGradient>
+  </defs>
+
+  <!-- Línea fina con desvanecimiento -->
+  <line x1="20" y1="30" x2="380" y2="30" stroke="url(#divGold)" stroke-width="1.2" />
+
+  <!-- Rama de Olivo Central -->
+  <g transform="translate(200, 30)">
+    <!-- Tallos -->
+    <path d="M 0,0 C -25,-6 -55,4 -80,-5" stroke="#5A6B4F" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M 0,0 C 25,-6 55,4 80,-5" stroke="#5A6B4F" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Hojas Izquierda -->
+    <path d="M -20,-2 C -32,-12 -28,-22 -15,-14 C -8,-7 -12,0 -20,-2 Z" fill="url(#divOlive)" />
+    <path d="M -45,1 C -58,-8 -54,-18 -42,-11 C -35,-4 -38,3 -45,1 Z" fill="#6B7D5F" />
+    <path d="M -70,-3 C -82,-11 -79,-20 -68,-13 C -62,-7 -64,-1 -70,-3 Z" fill="url(#divOlive)" />
+
+    <!-- Hojas Derecha -->
+    <path d="M 20,-2 C 32,-12 28,-22 15,-14 C 8,-7 12,0 20,-2 Z" fill="url(#divOlive)" />
+    <path d="M 45,1 C 58,-8 54,-18 42,-11 C 35,-4 38,3 45,1 Z" fill="#6B7D5F" />
+    <path d="M 70,-3 C 82,-11 79,-20 68,-13 C 62,-7 64,-1 70,-3 Z" fill="url(#divOlive)" />
+
+    <!-- Corazón / Flor Dorada Central -->
+    <circle cx="0" cy="0" r="7" fill="#FAF7F2" stroke="#C59B3F" stroke-width="1.5" />
+    <path d="M 0,-3 C -2,-5 -5,-2 -2,1 L 0,3 L 2,1 C 5,-2 2,-5 0,-3 Z" fill="#C59B3F"/>
+  </g>
+</svg>
